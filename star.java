@@ -1,36 +1,31 @@
-class star
-{
-	public static void main(String args[])
-	{	
-		int a, b;
-   		System.out.println();
+import java.util.Scanner;
 
-      	for(a = 1; a <= 5; a++)
+class star 
+{
+    public static void main(String args[]) 
+	{
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, n;
+
+        System.out.print("Enter the number: ");
+        n = sc.nextInt();
+
+        for (a = 1; a <= n; a++) 
 		{
-			for(b = 1; b <= 5; b++)
+            for (b = 1; b <= n; b++) 
 			{
-				if((a == 2 && b == 2) || (a == 2 && b == 3) || (a == 2 && b == 4))
+                if (a >= 2 && b >= 2 && b <= n - 1) 
 				{
-					System.out.print("  ");
-				}
-				else if((a == 3 && b == 2) || (a == 3 && b == 3) || (a == 3 && b == 4))
+                    System.out.print("  ");
+                } else 
 				{
-					System.out.print("  ");
-				}
-				else if((a == 4 && b == 2) || (a == 4 && b == 3) || (a == 4 && b == 4))
-				{
-					System.out.print("  ");
-				}
-				else if((a == 5 && b == 2) || (a == 5 && b == 3) || (a == 5 && b == 4))
-				{
-					System.out.print("  ");
-				}
-				else
-				{
-					System.out.print("* ");
-				}
-			}
-		 System.out.println(); 
-		}
-	}
+                    System.out.print("* ");
+                }
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
 }
